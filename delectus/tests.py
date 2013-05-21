@@ -1,16 +1,15 @@
 """
 This file demonstrates writing tests using the unittest module. These will pass
 when you run "manage.py test".
-
-Replace this with more appropriate tests for your application.
 """
-
 from django.test import TestCase
+from delectus.models import Tape
 
+class TapeTest(TestCase):
 
-class SimpleTest(TestCase):
-    def test_basic_addition(self):
-        """
-        Tests that 1 + 1 always equals 2.
-        """
-        self.assertEqual(1 + 1, 2)
+	def test_as_unicode_shows_title(self):
+		"""
+		__unicode__ should print out the title of the tape.
+		"""
+		tape = Tape(title= 'Beauty Plus Pity')
+		self.assertEqual(Tape.__unicode__(tape), 'Beauty Plus Pity')
