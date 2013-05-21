@@ -3,7 +3,7 @@ This file demonstrates writing tests using the unittest module. These will pass
 when you run "manage.py test".
 """
 from django.test import TestCase
-from delectus.models import Tape
+from tapes.models import Tape
 
 class TapeTest(TestCase):
 

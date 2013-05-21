@@ -102,10 +102,10 @@ MIDDLEWARE_CLASSES = (
     # 'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
-ROOT_URLCONF = 'del.urls'
+ROOT_URLCONF = 'delectus.urls'
 
 # Python dotted path to the WSGI application used by Django's runserver.
-WSGI_APPLICATION = 'del.wsgi.application'
+WSGI_APPLICATION = 'delectus.wsgi.application'
 
 TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
@@ -120,8 +120,8 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'delectus',
-    'django.contrib.admin'
+    'django.contrib.admin',
+    'tapes'
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
 )
