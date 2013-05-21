@@ -17,6 +17,7 @@ DATABASES = {} # Configured below to work with Heroku and a local env.
 # Parse database configuration from $DATABASE_URL
 try:
 	os.environ['CLEARDB_DATABASE_URL']
+	DATABASES['default']['ENGINE'] =  'django.db.backends.mysql'
 	DATABASES['default'] =  dj_database_url.config()
 except:
 	DATABASES['default'] = {
