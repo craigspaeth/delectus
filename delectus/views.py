@@ -1,4 +1,7 @@
 from django.http import HttpResponse
+from django.shortcuts import get_object_or_404, render
+from delectus.models import Tape
 
 def index(request):
-    return HttpResponse("Hello, world. You're at the index.")
+	tapes = Tape.objects.all()[:5]
+	return render(request, 'index.html', { 'tapes': tapes })
