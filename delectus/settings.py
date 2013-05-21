@@ -16,7 +16,7 @@ DATABASES = {} # Configured below to work with Heroku and a local env.
 
 # Parse database configuration from $DATABASE_URL
 try:
-	os.environ['DATABASE_URL']
+	os.environ['CLEARDB_DATABASE_URL']
 	DATABASES['default'] =  dj_database_url.config()
 except:
 	DATABASES['default'] = {
