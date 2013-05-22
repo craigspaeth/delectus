@@ -24,7 +24,7 @@
 4. Make some code changes, and commit everything `git add .; git commit -a -m "<YOUR MESSAGE HERE>"`
 5. Make sure your changes are in sync with the master remote repo
 	````
-	git add remote upstream git@github.com:cooperbattersby/delectus.git
+	git add remote upstream git@github.com:cooperbattersby/delectus.git; 
 	git pull upstream master
 	````
 5. Push your changes to your local repo `git push origin master`
@@ -38,7 +38,7 @@
 5. Add the "ClearDB MySQL Database Ignite" addon `heroku addons:add cleardb`
 6. Set your DATABASE_URL env variable to MySQL 
 	````
-	heroku config | grep CLEARDB_DATABASE_URL
+	heroku config | grep CLEARDB_DATABASE_URL; 
 	heroku config:set DATABASE_URL=<url returned from grep>
 	````
 7. Push to the heroku remote `git push heroku master`
