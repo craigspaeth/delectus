@@ -1,6 +1,6 @@
 # Delectus Video Art Website
 
-## Getting Started
+## Setting up locally
 
 1. Install Xcode
 2. Install Python
@@ -8,11 +8,13 @@
 4. Install MAMP
 5. Create a database in MySQL named "delectus-django"
 6. Fill in the database with some production backup
-7. Setup virtualenv in repo `virtualenv .`
-8. Source virtualenv CLIs `source bin/activate`
-9. Install python modules `pip install -r requirements.txt`
-9. Run a django db sync `python manage.py syncdb`
-10. Start the server! `python manage.py runserver`
+7. Fork the main repo from github https://github.com/cooperbattersby/delectus
+8. Go to your fork and clone your repo e.g. `git clone git@github.com:<USERNAME>/delectus.git`
+9. Setup virtualenv in the clone `virtualenv .`
+10. Source virtualenv CLIs `source bin/activate`
+11. Install python modules `pip install -r requirements.txt`
+12. Run a django db sync `python manage.py syncdb`
+13. Start the server! `python manage.py runserver`
 
 ## Forking & Contributing
 
