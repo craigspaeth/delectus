@@ -33,9 +33,13 @@
 2. Install Heroku Toolbelt
 3. Login to your heroku account `heroku login`
 4. Create a new app on heroku `heroku apps:create delectus-<username>`
-5. Remove the POST
 5. Add the "ClearDB MySQL Database Ignite" addon `heroku addons:add cleardb`
-6. Push to the heroku remote `git push heroku master`
-7. Sync the db `heroku run python manage.py syncdb`
-8. See your website `heroku open`
-9. Check for any issues `heroku logs`
+6. Set your DATABASE_URL env variable to MySQL 
+	````
+	heroku config | grep CLEARDB_DATABASE_URL
+	heroku config:set DATABASE_URL=<url returned from grep>
+	````
+7. Push to the heroku remote `git push heroku master`
+8. Sync the db `heroku run python manage.py syncdb`
+9. See your website `heroku open`
+10. If there are any issues check the heroku logs `heroku logs`

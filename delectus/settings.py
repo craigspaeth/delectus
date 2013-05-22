@@ -14,11 +14,10 @@ MANAGERS = ADMINS
 
 DATABASES = {} # Configured below to work with Heroku and a local env.
 
-# Parse database configuration from $DATABASE_URL
+# Use heroku's $DATABASE_URL or default to MAMP
 try:
-	os.environ['CLEARDB_DATABASE_URL']
+	os.environ['DATABASE_URL']
 	DATABASES['default'] =  dj_database_url.config()
-	DATABASES['default']['ENGINE'] =  'django.db.backends.mysql'
 except:
 	DATABASES['default'] = {
         'ENGINE': 'django.db.backends.mysql', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
